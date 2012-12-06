@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "be.barchy.tvguide"
+    versionCode="000001" 
+    version   = "0.0.1">
+
+  <name>widgit</name>
+
+  <description>Web apps at your fingertip</description>
+
+  <author href="http://www.barchy.be" email="widgit@barchy.be">Michael Barchy</author>
+  
+  <preference name="fullscreen" value="true" />
+  <preference name="webviewbounce" value="false" />    
+  <preference name="prerendered-icon" value="true" />
+  <preference name="detect-data-types" value="false" />
+  <preference name="ios-statusbarstyle" value="black-opaque" />
+  <preference name="permissions" value="none" />
+  
+  <feature name="http://api.phonegap.com/1.0/file" />
+  
+  <access origin="*" />
+  
+  <icon src="icon_57.png" width="57" height="57" />
+  <icon src="icon_72.png" gap:platform="ios" width="72" height="72" />
+  <icon src="icon_114.png" width="114" height="114" />
+  <icon src="icon_114.png" gap:platform="blackberry" />    
+
+  <!--
+  <gap:splash src="splash_480.png" />
+  <gap:splash src="splash_960.png" width="640" height="960" />
+  <gap:splash src="splash_1136.png" width="640" height="1136" />
+  <gap:splash src="splash_768.png" width="1024" height="768" />
+  <gap:splash src="splash_1024.png" width="768" height="1024" />
+  <gap:splash src="splash.jpg" gap:platform="winphone" />
+  -->
+
+</widget>
