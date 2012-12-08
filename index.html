@@ -22,9 +22,20 @@ function xhr( method, url, data, callback )
   req.onreadystatechange = function() { callback( req ) };
   req.open( method, url, true );
   if( method == 'POST' ) req.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+  if( method == 'PUT' )
+  {
+    req.setRequestHeader( 'User-Agent', 'MediaControl/1.0' );
+    req.setRequestHeader( 'X-Apple-Transition', 'None' );
+    req.setRequestHeader( 'Content-Length', data.length );
+  }
   req.send( data );
 }
 
-xhr( 'GET', 'http://www.google.be', null, function( r ) { if( r.readyState == 4 ) document.write( r.responseText ); } );
+xhr( 'GET', 'splash.png', null, function( r ) { if( r.readyState == 4 ) airplay( r.responseText ); } );
+
+function airplay( data )
+{
+  xhr( 'PUT', 'http://appletv.local:7000/photo', data, function( r ) { if( r.readyState == 4 ) document.write( r.responseText ); } );
+}
 
 </script>
