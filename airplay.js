@@ -65,13 +65,13 @@ function airplayPhotoData( data )
 
 function airplayURL( url )
 {
-  var f = document.createElement( 'a' );
+  var f = document.createElement( 'link' );
   f.href = url;
   xhr( 'GET', url, null, function( r )
   {
     if( r.readyState == 4 )
     {
-      var e = r.responseText;
+      var e = Utf8.encode( r.responseText );
       var a = document.createElement( 'iframe' );
       $( a ).css( { visibility: "hidden" } ).width( $( window ).width() ).height( $( window ).height() );
       $( '#content' ).empty().append( a );
