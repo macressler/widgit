@@ -55,13 +55,13 @@ function airplayPhoto( photo )
         xhr
         (
           'PUT',
-          'http://appletv.loca:7000/photo',
+          'http://appletv.local:7000/photo',
           a,
           function( r )
           {
             if( r.readyState == 4 )
             {
-              r.send( null ); // Keep-Alive test
+              alert( 'Done!' );
             }
           }
         );
