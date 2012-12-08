@@ -1,76 +1,15 @@
 <html>
 <head>
   <title>widgit</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
   <script src="base64.js"></script>
+  <script src="airplay.js"></script>
+  <script src="html2canvas.js"></script>
 </head>
-<body>
+<body onload="airplayURL( 'http://www.google.be/search?q=test&hl=fr' );">
 <h1>Soon...</h1>
 <h2>Airplay test</h2>
 <img id="photo" />
-<script>
-
-function xhr( method, url, data, callback )
-{
-  var req = null;
-  if( window.XMLHttpRequest ) req = new XMLHttpRequest();
-  if( window.ActiveXObject )
-  {
-    var names = [ 'Msxml2.XMLHTTP.6.0', 'Msxml2.XMLHTTP.3.0', 'Msxml2.XMLHTTP', 'Microsoft.XMLHTTP' ];
-    for( var i in names )
-    {
-      try{ req = ActiveXObject( names[ i ] ); break; }
-      catch( e ) { }
-    }
-  }
-  if( req == null )
-  {
-    alert( 'Browser not supported' );
-    return;
-  }
-  req.onreadystatechange = function() { callback( req ) };
-  req.open( method, url, true );
-  if( method == 'GET' ) req.overrideMimeType( 'text/plain; charset=x-user-defined' );
-  if( method == 'POST' ) req.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
-  req.send( data );
-}
-
-airplayPhoto( 'test.jpg' );
-
-function airplayPhoto( photo )
-{
-  xhr
-  (
-    'GET',
-    photo,
-    null,
-    function( r )
-    {
-      if( r.readyState == 4 )
-      {
-        var data = r.responseText;
-        document.getElementById( 'photo' ).src = 'data:image/jpeg;base64,' + base64encode( data );
-        var a = new ArrayBuffer( data.length );
-        var ui8a = new Uint8Array( a, 0 );
-        for( var i = 0; i < data.length; i++ ) ui8a[ i ] = ( data.charCodeAt( i ) & 0xff );
-        xhr
-        (
-          'PUT',
-          'http://appletv.local:7000/photo',
-          a,
-          function( r )
-          {
-            if( r.readyState == 4 )
-            {
-              alert( 'Done!' );
-            }
-          }
-        );
-      }
-    }
-  );
-
-}
-
-</script>
+<div id="content"></div>
 </body>
 </html>
