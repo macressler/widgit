@@ -31,7 +31,7 @@ function xhr( method, url, data, callback )
   req.open( method, url, true );
   if( method == 'GET' ) req.overrideMimeType( 'text/plain; charset=x-user-defined' );
   if( method == 'POST' ) req.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
-  if( method == 'PUT' ) req.setRequestHeader( 'Content-Transfer-Encoding', 'base64' );
+  if( method == 'PUT' ) req.setRequestHeader( 'Content-Type', 'image/jpeg' );
   req.send( data );
 }
 
@@ -40,7 +40,10 @@ xhr( 'GET', 'test.jpg', null, function( r ) { if( r.readyState == 4 ) { document
 
 function airplay( data )
 {
-  xhr( 'PUT', 'http://appletv.local:7000/photo', base64encode( data ), function( r ) { if( r.readyState == 4 ) document.write( r.responseText ); } );
+  var a = new ArrayBuffer( data.length );
+  var ui8a = new Uint8Array( a, 0 );
+  for( var i = 0; i < data.length; i++ ) ui8a[ i ] = ( data.charCodeAt( i ) & 0xff );
+  xhr( 'PUT', 'http://appletv.local:7000/photo', a, function( r ) { if( r.readyState == 4 ) document.write( r.responseText ); } );
 }
 
 </script>
