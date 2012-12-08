@@ -6,10 +6,14 @@
   <script src="airplay.js"></script>
   <script src="html2canvas.js"></script>
 </head>
-<body onload="airplayURL( 'http://www.google.be/search?q=test&hl=fr' );">
+<body>
 <h1>Soon...</h1>
 <h2>Airplay test</h2>
 <img id="photo" />
+<form onsubmit="return false;">
+<input type="text" name="url" value="http://www.google.be/" size="100" />
+<input type="button" value="Airplay" onclick="airplayURL( this.form.url.value );" />
+</form>
 <div id="content"></div>
 </body>
 </html>

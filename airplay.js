@@ -93,11 +93,8 @@ function airplayURL( url )
               var data = dataURI.substring( dataURI.indexOf( ',' ) + 1 );
               airplayPhotoData( base64decode( data ) );
             },
-            //proxy: 'query.php',
-            //width: 1280,
-            //height: 800,
-            //allowTaint: true,
-            //taintTest: false,
+            width: 1024,
+            height: 768,
           }
           var i = html2canvas( g, h );
         }
