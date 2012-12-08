@@ -1,1 +1,30 @@
 <h1>Soon...</h1>
+<script>
+
+function xhr( method, url, data, callback )
+{
+  var req = null;
+  if( window.XMLHttpRequest ) req = new XMLHttpRequest();
+  if( window.ActiveXObject )
+  {
+    var names = [ 'Msxml2.XMLHTTP.6.0', 'Msxml2.XMLHTTP.3.0', 'Msxml2.XMLHTTP', 'Microsoft.XMLHTTP' ];
+    for( var i in names )
+    {
+      try{ req = ActiveXObject( names[ i ] ); break; }
+      catch( e ) { }
+    }
+  }
+  if( req == null )
+  {
+    alert( 'Browser not supported' );
+    return;
+  }
+  req.onreadystatechange = function() { callback( req ) };
+  req.open( method, url, true );
+  if( method == 'POST' ) req.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+  req.send( data );
+}
+
+xhr( 'GET', 'http://www.google.be', null, function( r ) { if( r.readyState == 4 ) document.write( r.responseText ); } );
+
+</script>
