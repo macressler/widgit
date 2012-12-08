@@ -71,7 +71,7 @@ function airplayURL( url )
   {
     if( r.readyState == 4 )
     {
-      var e = Utf8.encode( r.responseText );
+      var e = Utf8.decode( r.responseText );
       var a = document.createElement( 'iframe' );
       $( a ).css( { visibility: "hidden" } ).width( $( window ).width() ).height( $( window ).height() );
       $( '#content' ).empty().append( a );
