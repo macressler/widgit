@@ -1,4 +1,6 @@
+<script src="base64.js"></script>
 <h1>Soon...</h1>
+<h2>Airplay test</h2>
 <img id="photo" />
 <script>
 
@@ -33,7 +35,7 @@ function xhr( method, url, data, callback )
   req.send( data );
 }
 
-xhr( 'GET', 'airplay.jpg', null, function( r ) { if( r.readyState == 4 ) { document.getElementById( 'photo' ).src = 'data:image/jpeg;base64,' + base64.encode( r.responseText ); airplay( r.responseText ); } } );
+xhr( 'GET', 'airplay.jpg', null, function( r ) { if( r.readyState == 4 ) { document.getElementById( 'photo' ).src = 'data:image/jpeg;base64,' + base64encode( r.responseText ); airplay( r.responseText ); } } );
 
 
 function airplay( data )
