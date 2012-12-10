@@ -65,7 +65,7 @@ function airplayPhotoData( data )
 
 function airplayURL( url )
 {
-  var f = document.createElement( 'link' );
+  var f = document.createElement( 'a' );
   f.href = url;
   xhr( 'GET', url, null, function( r )
   {
