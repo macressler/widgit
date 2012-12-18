@@ -1,9 +1,9 @@
-function widgit( bm )
+function widgit( b )
 {
-  var tpl = { url: '', fullScreen: true };
-  for( var k in tpl )
+  var t = { url: '', fullScreen: true };
+  for( var k in t )
   {
-    if( typeof bm[ k ] == 'undefined' || bm[ k ] == null ) bm[ k ] = tpl[ k ];
+    if( typeof b[ k ] == 'undefined' || b[ k ] == null ) b[ k ] = t[ k ];
   }
-  if( bm.fullScreen ) location = bm.url
+  if( b.fullScreen ) location = b.url
 }
