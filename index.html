@@ -1,20 +1,9 @@
 <html>
 <head>
   <title>widgit</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
-  <script src="utf8.js"></script>
-  <script src="base64.js"></script>
-  <script src="airplay.js"></script>
-  <script src="html2canvas.js"></script>
+  <script language="JavaScript" src="widgit.js"></script>
+  <script language="JavaScript" src="bm.js"></script>
 </head>
-<body>
-<h1>Soon...</h1>
-<h2>Airplay test</h2>
-<img id="photo" />
-<form onsubmit="return false;">
-<input type="text" name="url" value="http://widgit.tk/" size="100" />
-<input type="button" value="Airplay" onclick="airplayURL( this.form.url.value );" />
-</form>
-<div id="content"></div>
+<body onload="widgit( bm );">
 </body>
 </html>
