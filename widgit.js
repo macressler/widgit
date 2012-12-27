@@ -1,7 +1,14 @@
 function init( b, auto )
 {
   document.getElementById( 'button' ).innerHTML = b[ 'name' ];
-  if( auto ) widgit( b );
+  if( window.cordova || window.Cordova || window.PhoneGap )
+  {
+    document.addEventListener( 'deviceready', function() { if( auto ) widgit( b ); }, false );  
+  }
+    else
+  {
+    if( auto ) widgit( b );
+  }
 }
 
 function widgit( b )
