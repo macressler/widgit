@@ -15,7 +15,7 @@ function widgit( b )
 {
   var fr = new FileReader();
   fr.onerror = function() { alert( fr.error.code ); }
-  alert( fr.readAsText( './../widgit.app/www/index.html' ) ); 
+  alert( fr.readAsText( './index.html' ) ); 
   var t = { name: '', url: '', fullScreen: false };
   for( var k in t )
   {
