@@ -13,9 +13,9 @@ function widgit( b )
   }
   if( b.fullScreen )
   {
-    if( window.cordova || window.Cordova || window.PhoneGap )
+    if( window.plugins && window.plugins.childBrowser )
     {
-      ChildBrowser.showWebPage( b.url );
+      window.plugins.childBrowser.showWebPage( b.url );
     }
       else
     {
