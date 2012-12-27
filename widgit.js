@@ -1,6 +1,6 @@
 function widgit( b )
 {
-  var t = { name: '', url: '', fullScreen: true };
+  var t = { name: '', url: '', fullScreen: false };
   for( var k in t )
   {
     if( typeof b[ k ] == 'undefined' || b[ k ] == null ) b[ k ] = t[ k ];
@@ -29,8 +29,8 @@ function openURL( url )
     var a = document.createElement( 'a' );
     a.setAttribute( 'href', url );
     a.setAttribute( 'target', '_blank' );
-    var dispatch = document.createEvent( 'HTMLEvents' );
-    dispatch.initEvent( 'click', true, true );
-    a.dispatchEvent( dispatch );    
+    var e = document.createEvent( 'HTMLEvents' );
+    e.initEvent( 'click', true, true );
+    a.dispatchEvent( e );    
   }
 }
