@@ -1,3 +1,9 @@
+function init( b, auto )
+{
+  document.getElementById( 'button' ).innerHTML = b[ 'name' ];
+  if( auto ) widgit( b );
+}
+
 function widgit( b )
 {
   var t = { name: '', url: '', fullScreen: false };
@@ -5,7 +11,6 @@ function widgit( b )
   {
     if( typeof b[ k ] == 'undefined' || b[ k ] == null ) b[ k ] = t[ k ];
   }
-  document.getElementById( 'button' ).innerHTML = b[ 'name' ];
   if( b.fullScreen )
   {
     // to be replaced with ChildBrowser
