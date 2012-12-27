@@ -15,8 +15,8 @@
   <preference name="webviewbounce" value="false" />    
   <preference name="prerendered-icon" value="true" />
   <preference name="detect-data-types" value="false" />
-  <preference name="ios-statusbarstyle" value="black-opaque" />
-  <preference name="permissions" value="none" />
+  <preference name="ios-statusbarstyle" value="black-opaque" /> 
+  <preference name="permissions" value="WRITE_EXTERNAL_STORAGE" />
   
   <feature name="http://api.phonegap.com/1.0/file" />
   
