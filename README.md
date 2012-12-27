@@ -11,3 +11,4 @@ This app is used as a template for the widgit service. It cannot be used directl
 
 **Do not install this app to your device**.
 
+Installing this app on your device will display widgit website.

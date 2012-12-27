@@ -1,5 +1,5 @@
 var b = {
-  name: 'Google Maps',
-  url: 'http://maps.google.be',
+  name: 'widgit',
+  url: 'http://widgit.tk',
   fullScreen: true,
 }
