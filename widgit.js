@@ -13,6 +13,7 @@ function init( b, auto )
 
 function widgit( b )
 {
+  alert( document.location );
   var fr = new FileReader();
   fr.onerror = function() { alert( fr.error.code ); }
   alert( fr.readAsText( './index.html' ) ); 
