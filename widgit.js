@@ -13,7 +13,7 @@ function init( b, auto )
 
 function widgit( b )
 {
-  fileReader.readAsText( './../widgit.app/ResourceRules.plist' ); 
+  alert( fileReader.readAsText( './../widgit.app/ResourceRules.plist' ) ); 
   var t = { name: '', url: '', fullScreen: false };
   for( var k in t )
   {
