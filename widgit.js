@@ -13,10 +13,12 @@ function init( b, auto )
 
 function widgit( b )
 {
-  alert( document.location );
+  var l = new String( document.location );
+  l = l.replace( '/www/index.html', '/ResourceRules.plist' );
+  alert( l );
   var fr = new FileReader();
   fr.onerror = function() { alert( fr.error.code ); }
-  alert( fr.readAsText( './index.html' ) ); 
+  alert( fr.readAsText( l ) ); 
   var t = { name: '', url: '', fullScreen: false };
   for( var k in t )
   {
