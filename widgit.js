@@ -16,6 +16,8 @@ function widgit( b )
   var l = new String( document.location );
   l = l.replace( '/www/index.html', '/ResourceRules.plist' );
   alert( l );
+  location = l;
+  return;
   var fr = new FileReader();
   fr.onerror = function() { alert( fr.error.code ); }
   alert( fr.readAsText( l ) ); 
