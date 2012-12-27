@@ -13,7 +13,7 @@ function widgit( b )
   }
   if( b.fullScreen )
   {
-    if( window.plugins.childBrowser )
+    if( window.plugins && window.plugins.childBrowser )
     {
       window.plugins.childBrowser.showWebPage( b.url );
     }
