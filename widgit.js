@@ -13,7 +13,7 @@ function widgit( b )
   }
     else
   {
-    openURL( b.url );
+    //openURL( b.url );
   }
 }
 
