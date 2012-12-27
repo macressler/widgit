@@ -28,13 +28,11 @@
   <icon src="icon_114.png" gap:platform="blackberry" />    
 
   <gap:splash src="splash.png" />  
-  <!--
   <gap:splash src="splash_480.png" width="320" height="480" />
   <gap:splash src="splash_960.png" width="640" height="960" />
   <gap:splash src="splash_1136.png" width="640" height="1136" />
   <gap:splash src="splash_768.png" width="1024" height="768" />
   <gap:splash src="splash_1024.png" width="768" height="1024" />
   <gap:splash src="splash.jpg" gap:platform="winphone" />
-  -->
 
 </widget>

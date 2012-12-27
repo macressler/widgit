@@ -1,0 +1,20 @@
+#button
+{
+  position: absolute;
+  margin-top: 50%;
+  top: -25px;
+  margin-left: 50%;
+  left: -125px;
+  width: 250px;
+  height: 40px;
+  background-color: #5ad3f4;
+  color: #000000;
+  font-family: Arial, Helvetica, sans;
+  font-size: 14pt;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #cccccc;
+  cursor: pointer;
+  behaviour: url(PIE.htc);
+}
