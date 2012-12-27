@@ -13,8 +13,14 @@ function widgit( b )
   }
   if( b.fullScreen )
   {
-    // to be replaced with ChildBrowser
-    location = b.url
+    if( window.plugins.childBrowser )
+    {
+      window.plugins.childBrowser.showWebPage( b.url );
+    }
+      else
+    {
+      location = b.url;
+    }
   }
     else
   {

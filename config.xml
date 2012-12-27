@@ -35,4 +35,6 @@
   <gap:splash src="splash_1024.png" width="768" height="1024" />
   <gap:splash src="splash.jpg" gap:platform="winphone" />
 
+  <gap:plugin name="ChildBrowser" />
+
 </widget>
